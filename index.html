@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour of DOM</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <style>
+        .fruits-container li {
+            color: green;
+        }
+
+        li {
+            color: tomato;
+        }
+
+        #fruits-title {
+            color: black;
+        }
+
+        .importent-places {
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <h1>Welcome to my DOM</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iste officiis repudiandae ullam? Soluta
+                quaerat facilis molestias, quam libero velit? Fuga voluptatem exercitationem reprehenderit, repellat cum
+                adipisci tempora accusantium laboriosam!</p>
+            <h1>My awesome Dom de baba</h1>
+
+            <ul>
+                <li>Jalali set</li>
+                <li>Shafayet</li>
+                <li>bonobash</li>
+
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title">fruits i like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+
+        <section id="places-container" class="large-text">
+            <h1 id="places-title">places i like to visit</h1>
+            <li class="importent-places">sundarban</li>
+            <li class="importent-places">Bandarban</li>
+            <li class="importent-places">Kataban</li>
+            <li class="other-place">Shalban</li>
+        </section>
+
+
+    </main>
+    <script>
+        // const student = {
+        //     name: 'ABUL',
+        //     ID: 2871,
+        //     study: function (time) {
+        //         console.log(time, 'study kortache')
+        //     }
+        // }
+        // console.log('adding js inside the html file');
+
+        const liCollection = document.getElementsByTagName('li')
+        // console.log(liCollection);
+        for (const li of liCollection) {
+            console.log(li.innerText);
+        }
+        const allHeading = document.getElementsByTagName('h1');
+        for (const h1 of allHeading) {
+            // console.log(h1.innerText);
+        }
+
+        const places = document.getElementsByClassName('importent-places')
+        const fruitsTitle = document.getElementById('fruits-title')
+        fruitsTitle.innerText = 'Fruits changed by JS'
+        for (const place of places) {
+            // console.log(place.innerText);
+        }
+
+
+        //querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li')
+        // console.log(someLi);
+        for (const li of someLi) {
+            // console.log(li.innerText);
+        }
+        const li = document.querySelector('.fruits-container li')
+        //console.log(li.innerText);
+
+
+        // option 1: getElementsByTagName
+        // option 2: getElementById
+        // option 3: getElementsByClassName
+        // option 4: querySelector
+        // option 5: querySelectorAll
+
+
+    </script>
+    <script src="js/dom.js"></script>
+    <script src="js/styleinjs.js"></script>
+</body>
+
+</html>
+
+
+<!-- need to must know -->
